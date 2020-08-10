@@ -60,6 +60,18 @@ a {
   justify-content: start;
 }
 
+.navigation__list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation__item:not(:last-child) {
+  margin-right: 10px;
+}
+
 .social {
   display: flex;
   justify-content: space-around;
@@ -91,7 +103,8 @@ a {
   grid-row: 1/-1;
 }
 
-.project__link {
+.project__link,
+.navigation__link {
   color: #000000;
 }
 
@@ -100,11 +113,14 @@ a {
 }
 
 .project__link:hover,
-.project__link:focus {
+.project__link:focus,
+.navigation__link:hover,
+.navigation__link:focus {
   color: #008272;
 }
 
-.project__link:active {
+.project__link:active,
+.navigation__link:active {
   color: #008272;
   opacity: 0.3;
 }
