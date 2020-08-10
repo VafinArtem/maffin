@@ -1,0 +1,10 @@
+.social {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  width: 100px;
+}
+
+.social__link:hover .social__img--bg {
+  fill: #008272;
+}

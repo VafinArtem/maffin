@@ -1,0 +1,21 @@
+.navigation__list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.navigation__link:hover,
+.navigation__link:focus {
+  color: #008272;
+}
+
+.navigation__link:active {
+  color: #008272;
+  opacity: 0.3;
+}
