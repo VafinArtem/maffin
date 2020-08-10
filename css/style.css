@@ -91,6 +91,24 @@ a {
   grid-row: 1/-1;
 }
 
+.project__link {
+  color: #000000;
+}
+
+.project__link--desc {
+  text-decoration: underline;
+}
+
+.project__link:hover,
+.project__link:focus {
+  color: #008272;
+}
+
+.project__link:active {
+  color: #008272;
+  opacity: 0.3;
+}
+
 .project__desc {
   font-family: "Arial", sans-serif;
 }
