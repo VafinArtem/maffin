@@ -132,3 +132,18 @@ a {
 .project__technology {
   font-family: "Arial", sans-serif;
 }
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 5px;
+  }
+  .project__item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .project__img {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
