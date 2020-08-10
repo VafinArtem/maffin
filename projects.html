@@ -10,21 +10,36 @@
 
 <body class="body">
   <header class="header"></header>
-  <main class="main main--projects">
-    <ul class="project">
-      <li class="project__item">
-        <img src="source/img/gllacy_pr.jpg" width="400" height="300" alt="Проект Gllacy">
-        <a href="source/projects/gllacy/index.html" class="project__link">Gllacy</a>
-      </li>
-      <li class="project__item">
-        <img src="source/img/technomart_pr.jpg" width="400" height="300" alt="Проект Gllacy">
-        <a href="source/projects/technomart/index.html" class="project__link">Technomart</a>
-      </li>
-      <li class="project__item">
-        <img src="source/img/nimes_pr.jpg" width="400" height="300" alt="Проект Gllacy">
-        <a href="source/projects/nimes/index.html" class="project__link">Nimes</a>
-      </li>
-    </ul>
+  <main class="main main--projects container">
+    <section class="project">
+      <h2 class="main__title">Реализованные проекты</h2>
+      <ul class="project__list">
+        <li class="project__item">
+          <img src="source/img/gllacy_pr.jpg" class="project__img" width="400" height="300" alt="Проект Gllacy">
+          <a href="source/projects/gllacy/index.html" class="project__link">Проект магазина Gllacy</a>
+          <div class="project__wrapper">
+            <p class="project__desc">
+              Реализован в рамках курса "HTML и CSS. Профессиональная вёрстка сайтов" на <a href="htmlacademy.ru">htmlacademy.ru</a>. Данный проект в отличии от проекта Техномарта верстался без помощи наставника и был защищен на 100%
+            </p>
+            <p class="project__technology">Использованные технологии: HTML, CSS, JS, Grid, Flex, фикс, только desktop версия.</p>
+            <dl>
+              <dt>Дата реализации</dt>
+              <dd>Июнь 2020 года</dd>
+              <dt>Срок верстки</dt>
+              <dd>1 неделя</dd>
+            </dl>
+          </div>
+        </li>
+        <li class="project__item">
+          <img src="source/img/technomart_pr.jpg" width="400" height="300" alt="Проект Gllacy">
+          <a href="source/projects/technomart/index.html" class="project__link">Technomart</a>
+        </li>
+        <li class="project__item">
+          <img src="source/img/nimes_pr.jpg" width="400" height="300" alt="Проект Gllacy">
+          <a href="source/projects/nimes/index.html" class="project__link">Nimes</a>
+        </li>
+      </ul>
+    </section>
   </main>
   <footer class="footer"></footer>
 </body>
