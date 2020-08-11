@@ -18,7 +18,6 @@ body {
   color: #000000;
   height: 100%;
   display: grid;
-  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
 }
 
@@ -30,6 +29,7 @@ a {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 30px;
+
   @media (max-width: 767px) {
     padding: 0 5px;
   }

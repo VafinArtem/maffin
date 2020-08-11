@@ -6,16 +6,22 @@
   list-style: none;
 }
 
-.navigation__item:not(:last-child) {
-  margin-right: 10px;
+.navigation__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 
-.navigation__link:hover,
-.navigation__link:focus {
-  color: #008272;
-}
+.navigation__link {
+  color: #000000;
 
-.navigation__link:active {
-  color: #008272;
-  opacity: 0.3;
+  &:hover,
+  &:focus {
+    color: #008272;
+  }
+
+  &:active {
+    color: #008272;
+    opacity: 0.3;
+  }
 }

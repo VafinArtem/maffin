@@ -12,6 +12,7 @@
   padding: 20px;
   margin-bottom: 30px;
   border: 1px solid #000000;
+
   @media (max-width: 767px) {
     display: flex;
     flex-direction: column;
@@ -21,29 +22,29 @@
 
 .project__img {
   grid-row: 1/-1;
+
   @media (max-width: 767px) {
     margin-bottom: 10px;
     text-align: center;
   }
 }
 
-.project__link,
-.navigation__link {
+.project__link {
   color: #000000;
-}
 
-.project__link--desc {
-  text-decoration: underline;
-}
+  &--desk {
+    text-decoration: underline;
+  }
 
-.project__link:hover,
-.project__link:focus {
-  color: #008272;
-}
+  &:hover,
+  &:focus {
+    color: #008272;
+  }
 
-.project__link:active {
-  color: #008272;
-  opacity: 0.3;
+  &:active {
+    color: #008272;
+    opacity: 0.3;
+  }
 }
 
 .project__desc {
