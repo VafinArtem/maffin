@@ -1,0 +1,20 @@
+.page {
+  height: 100%;
+}
+
+.page__body {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #000000;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+
+  &--index {
+    height: 100%;
+  }
+}
