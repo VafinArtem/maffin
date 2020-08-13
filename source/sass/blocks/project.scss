@@ -10,8 +10,12 @@
   grid-template-columns: min-content 1fr;
   grid-template-rows: min-content 1fr;
   padding: 20px;
-  margin-bottom: 30px;
+
   border: 1px solid #000000;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 
   @media (max-width: 767px) {
     display: flex;
