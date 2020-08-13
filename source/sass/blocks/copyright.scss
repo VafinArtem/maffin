@@ -1,0 +1,14 @@
+.copyright__link {
+  color: #000000;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: #008272;
+  }
+
+  &:active {
+    color: #008272;
+    opacity: 0.3;
+  }
+}
