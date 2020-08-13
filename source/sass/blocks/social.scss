@@ -19,13 +19,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  // @media (min-width: $tablet-width) {
-  //   &:not(:last-child) {
-  //     padding-top: 3px;
-  //     margin-right: 29px;
-  //   }
-  // }
 }
 
 .social__img {
@@ -45,31 +38,4 @@
       fill: transparentize(#008272, 0.3);
     }
   }
-
-  // &--vkontakte {
-  //   @media (min-width: $tablet-width) {
-  //     .social__img {
-  //       width: 28.89px;
-  //       height: 17px;
-  //     }
-  //   }
-  // }
-
-  // &--instagram {
-  //   @media (min-width: $tablet-width) {
-  //     .social__img {
-  //       width: 23px;
-  //       height: 23px;
-  //     }
-  //   }
-  // }
-
-  // &--facebook {
-  //   @media (min-width: $tablet-width) {
-  //     .social__img {
-  //       width: 12.83px;
-  //       height: 26.97px;
-  //     }
-  //   }
-  // }
 }
