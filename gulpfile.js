@@ -7,6 +7,8 @@ const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
+const htmlmin = require('gulp-htmlmin');
+const uglify = require('gulp-uglify-es').default;
 const imagemin = require("gulp-imagemin");
 const svgstore = require("gulp-svgstore");
 const webp = require("gulp-webp");
@@ -26,7 +28,7 @@ const styles = () => {
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
-    .pipe(sync.stream());
+    .pipe(sync.stream())
 }
 
 exports.styles = styles;
@@ -71,9 +73,7 @@ exports.webp = iwebp;
 const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
-    "source/js/**",
-    "source/*.html"
+    "source/img/**"
   ], {
     base: "source"
   })
@@ -85,16 +85,25 @@ exports.copy = copy;
 // HTML
 
 const html = () => {
-  return gulp.src([
-    "source/*.html"
-  ], {
-    base: "source"
-  })
+  return gulp.src("source/*.html")
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest("build"))
-  .pipe(sync.stream());
+  .pipe(sync.stream())
 }
 
 exports.html = html;
+
+// JS
+
+const js = () => {
+  return gulp.src("source/js/script.js")
+    .pipe(rename("script.min.js"))
+    .pipe(uglify())
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+}
+
+exports.js = js;
 
 // Delete
 
@@ -106,7 +115,7 @@ exports.clean = clean;
 
 // Build
 
-const build = (done) => gulp.series (clean, copy, styles, sprite)(done);
+const build = (done) => gulp.series (clean, copy, styles, html, js, sprite)(done);
 exports.build = build;
 
 // Server
@@ -129,6 +138,7 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/js/*.js", gulp.series("js"));
   gulp.watch("source/*.html", gulp.series("html"));
 }
 
