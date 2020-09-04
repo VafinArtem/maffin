@@ -28,18 +28,27 @@
   font-weight: 500;
 }
 
-.project__img {
-  grid-row: 1/-1;
+// .project__img {
 
-  @media (max-width: 767px) {
-    margin-bottom: 10px;
-    text-align: center;
-  }
-}
+//   @media (max-width: 767px) {
+//     margin-bottom: 10px;
+//     text-align: center;
+//   }
+// }
 
 .project__link {
   font-size: 24px;
   color: #000000;
+
+  &--img {
+    grid-row: 1/-1;
+    display: block;
+
+    @media (max-width: 767px) {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
 
   &--desc {
     font-size: inherit;
