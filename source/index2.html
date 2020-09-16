@@ -5,15 +5,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="Description" content="Вафин Артем junior frontend developer">
-  <title>Maffin - Вафин Артем начинающий Фронтенд разработчик</title>
+  <title>Maffin.pw - Вафин Артем начинающий Фронтенд разработчик</title>
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
   <link href="css/styles.min.css" rel="stylesheet">
 </head>
 
 <body>
-  <header class="page-header">
+  <header class="page-header container">
+    <nav class="page-header__nav navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item"><a href="projects.html" class="navigation__link">Проекты</a></li>
+        <li class="navigation__item"><a href="about.html" class="navigation__link">Обо мне</a></li>
+      </ul>
+    </nav>
 
+    <div class="page-header__logo logo">
+      <a class="logo__link">
+        <img src="img/muffin.svg" width="70" height="70" alt="maffin.pw" class="logo__img">
+      </a>
+    </div>
+
+    <div class="page-header__social social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a href="https://vk.com/a_vafin" class="social__link social__link--vkontakte" aria-label="Страница Вконтакте">
+            <svg class="social__img social__img--vkontakte" width="30" height="30">
+              <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="https://www.instagram.com/artem_vafin/" class="social__link social__link--instagram"
+            aria-label="Страница Instagramm">
+            <svg class="social__img social__img--insta" width="30" height="30">
+              <use xlink:href="img/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="https://github.com/VafinArtem" class="social__link social__link--github"
+            aria-label="Страница GitHub">
+            <svg class="social__img social__img--insta" width="30" height="30">
+              <use xlink:href="img/sprite.svg#icon-github"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="mailto: a.vafin85@gmail.com" class="social__link social__link--mail" aria-label="Написать письмо">
+            <svg class="social__img social__img--mail" width="30" height="30">
+              <use xlink:href="img/sprite.svg#icon-mail"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
   </header>
 
   <main class="page-main">
