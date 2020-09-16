@@ -1,25 +1,22 @@
 .navigation__list {
   @include list-none;
-  display: flex;
-  justify-content: center;
-}
-
-.navigation__item {
-  &:not(:last-child) {
-    margin-right: 10px;
-  }
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 15px;
 }
 
 .navigation__link {
-  color: #000000;
+  font-size: 19px;
+  line-height: 20px;
+  color: $basic-black;
 
   &:hover,
   &:focus {
-    color: #008272;
+    color: $basic-green;
   }
 
   &:active {
-    color: #008272;
+    color: $basic-green;
     opacity: 0.3;
   }
 }

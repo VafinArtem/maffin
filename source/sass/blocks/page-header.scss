@@ -3,9 +3,22 @@
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   min-height: 80px;
+  border-bottom: 2px solid $basic-black;
 }
 
 .page-header__logo {
   display: flex;
   justify-content: center;
+}
+
+.page-header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-header__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
