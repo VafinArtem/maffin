@@ -1,8 +1,14 @@
-.page {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
   height: 100%;
 }
 
-.page__body {
+body {
   min-width: 320px;
   min-height: 100%;
   margin: 0;
@@ -13,8 +19,8 @@
   color: #000000;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
+}
 
-  &--index {
-    height: 100%;
-  }
+a {
+  text-decoration: none;
 }
