@@ -1,0 +1,31 @@
+.properties {
+  margin: 0;
+}
+
+.properties__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 40px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid $basic-black;
+}
+
+.properties__desc {
+  flex-grow: 1;
+  margin: 0;
+}
+
+.properties__item,
+.properties__desc {
+  text-align: left;
+  font-size: 15px;
+  line-height: 20px;
+  color: $basic-black;
+}
+
+.properties__item {
+  width: 100px;
+}
