@@ -17,7 +17,6 @@
 
 .projects__item {
   position: relative;
-  // border: 1px solid $basic-black;
   box-shadow: 0 6px 10px transparentize($basic-black, 0.8);
   opacity: 0.7;
   transition: 0.3s;
@@ -25,6 +24,7 @@
   &:hover {
     box-shadow: 0 6px 10px transparentize($basic-black, 0.6);
     opacity: 1;
+
     & .projects__desc {
       display: block;
     }
@@ -47,16 +47,16 @@
   // z-index: 10;
 
   position: absolute;
-  display: none;
   top: 100%;
   left: 22%;
+  display: none;
   margin: -50px 0 0;
-  font-weight: 500;
-  background-color: #fff;
-  border-radius: 4px;
-  border: 1px solid #000;
   padding: 5px;
+  font-weight: 500;
   font-size: 18px;
   line-height: 26px;
+  background-color: $basic-white;
+  border: 1px solid $basic-black;
+  border-radius: 4px;
   z-index: 10;
 }
