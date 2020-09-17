@@ -15,11 +15,14 @@
 
 .recent__item {
   position: relative;
-  border: 1px solid $basic-black;
-  transition: 0.2s;
+  // border: 1px solid $basic-black;
+  box-shadow: 0 6px 10px transparentize($basic-black, 0.8);
+  opacity: 0.7;
+  transition: 0.3s;
 
   &:hover {
-    box-shadow: 0 6px 10px transparentize($basic-black, 0.8);
+    box-shadow: 0 6px 10px transparentize($basic-black, 0.6);
+    opacity: 1;
     & .recent__desc {
       display: block;
     }
