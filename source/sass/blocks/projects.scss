@@ -1,4 +1,4 @@
-.recent__title {
+.projects__title {
   margin: 0;
   padding-bottom: 40px;
   font-weight: 300;
@@ -6,7 +6,7 @@
   line-height: 34px;
 }
 
-.recent__list {
+.projects__list {
   @include list-none;
 
   display: grid;
@@ -15,7 +15,7 @@
   gap: 24px;
 }
 
-.recent__item {
+.projects__item {
   position: relative;
   // border: 1px solid $basic-black;
   box-shadow: 0 6px 10px transparentize($basic-black, 0.8);
@@ -25,17 +25,17 @@
   &:hover {
     box-shadow: 0 6px 10px transparentize($basic-black, 0.6);
     opacity: 1;
-    & .recent__desc {
+    & .projects__desc {
       display: block;
     }
   }
 }
 
-.recent__img {
+.projects__img {
   display: block;
 }
 
-.recent__desc {
+.projects__desc {
   // position: absolute;
   // bottom: 100%;
 
