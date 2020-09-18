@@ -1,7 +1,7 @@
 .about {
   display: grid;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     grid-template-columns: auto 1fr;
     gap: 25px;
   }
@@ -23,7 +23,7 @@
   object-fit: cover;
   box-shadow: 0 6px 10px transparentize($basic-black, 0.8);
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     width: 300px;
     height: auto;
   }
