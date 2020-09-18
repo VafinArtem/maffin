@@ -15,14 +15,20 @@
   justify-content: center;
 }
 
-.page-header__nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+// .page-header__nav {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+.page-header__contacts {
+  display: grid;
+  justify-items: end;
+  grid-template-rows: repeat(2, 1fr);
 }
 
 .page-header__social {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
