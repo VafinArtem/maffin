@@ -2,20 +2,33 @@
   display: grid;
   grid-template-rows: auto 1fr;
   row-gap: 50px;
+
+  @media (min-width: $desktop-width) {
+    grid-template-rows: auto 1fr;
+    row-gap: 50px;
+  }
 }
 
 .card__wrapper {
   display: grid;
-  grid-template-columns: repeat(2, auto) 1fr;
-  grid-template-rows: auto 1fr;
-  column-gap: 15px;
-  row-gap: 20px;
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(2, auto) 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 15px;
+    row-gap: 20px;
+  }
 
   &--image {
-    grid-row: 1/2;
-    grid-template-columns: repeat(3, min-content);
-    column-gap: 50px;
-    row-gap: 0;
+    grid-row: 2/3;
+    grid-template-rows: repeat(3, min-content);
+    row-gap: 24px;
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: repeat(3, min-content);
+      column-gap: 50px;
+      row-gap: 0;
+    }
   }
 }
 
@@ -52,12 +65,15 @@
 
 .card__image {
   position: relative;
+  width: 260px;
   border-radius: 10px;
   box-shadow: 0 6px 10px transparentize($basic-black, 0.8);
 
   &--desktop {
-    width: 348px;
-    height: 261px;
+    @media (min-width: $desktop-width) {
+      width: 348px;
+      height: 261px;
+    }
 
     &::before {
       @include pseudo;
@@ -77,8 +93,10 @@
   }
 
   &--tablet {
-    width: 348px;
-    height: 261px;
+    @media (min-width: $desktop-width) {
+      width: 348px;
+      height: 261px;
+    }
 
     &::before {
       @include pseudo;
@@ -98,8 +116,10 @@
   }
 
   &--mobile {
-    width: 148px;
-    height: 261px;
+    @media (min-width: $desktop-width) {
+      width: 148px;
+      height: 261px;
+    }
 
     &::before {
       @include pseudo;
