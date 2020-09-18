@@ -1,7 +1,7 @@
 .card {
   display: grid;
-  grid-template-columns: 1fr 500px;
-  gap: 25px;
+  grid-template-rows: auto 1fr;
+  row-gap: 50px;
 }
 
 .card__text {
@@ -10,19 +10,21 @@
 
 .card__wrapper {
   &--image {
+    grid-row: 1/2;
     display: grid;
-    justify-content: center;
+    grid-template-columns: repeat(3, min-content);
+    column-gap: 50px;
   }
 }
 
 .card__image {
   position: relative;
+  border-radius: 10px;
   box-shadow: 0 6px 10px transparentize($basic-black, 0.8);
 
   &--desktop {
     width: 348px;
     height: 261px;
-    border-radius: 10px;
 
     &::before {
       @include pseudo;
@@ -32,6 +34,48 @@
       height: 50px;
       background-color: $basic-white;
       background-image: url("../../img/icon-pc.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 30px auto;
+      border-radius: 50%;
+      z-index: 10;
+      box-shadow: 0 6px 10px transparentize($basic-black, 0.8);
+    }
+  }
+
+  &--tablet {
+    width: 348px;
+    height: 261px;
+
+    &::before {
+      @include pseudo;
+      top: -15px;
+      left: -15px;
+      width: 50px;
+      height: 50px;
+      background-color: $basic-white;
+      background-image: url("../../img/icon-tablet.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 30px auto;
+      border-radius: 50%;
+      z-index: 10;
+      box-shadow: 0 6px 10px transparentize($basic-black, 0.8);
+    }
+  }
+
+  &--mobile {
+    width: 148px;
+    height: 261px;
+
+    &::before {
+      @include pseudo;
+      top: -15px;
+      left: -15px;
+      width: 50px;
+      height: 50px;
+      background-color: $basic-white;
+      background-image: url("../../img/icon-mobile.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: 30px auto;
