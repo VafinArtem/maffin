@@ -2,7 +2,7 @@
   display: grid;
   grid-template-rows: auto;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     display: none;
   }
 }
@@ -13,7 +13,7 @@
   align-items: center;
   justify-items: center;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, auto);
     gap: 15px;
   }
@@ -24,7 +24,7 @@
   font-size: 26px;
   line-height: 30px;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     font-size: 19px;
     line-height: 20px;
   }
