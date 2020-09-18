@@ -1,6 +1,10 @@
 .page-main {
-  padding-top: 60px;
+  padding-top: 40px;
   background-color: $special-blue;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 60px;
+  }
 }
 
 .page-main__title {
