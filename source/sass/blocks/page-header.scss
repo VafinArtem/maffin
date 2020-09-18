@@ -15,11 +15,15 @@
   justify-content: center;
 }
 
-// .page-header__nav {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
+.page-header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
 
 .page-header__contacts {
   display: grid;
