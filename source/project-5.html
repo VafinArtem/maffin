@@ -14,6 +14,12 @@
 <body>
   <header class="page-header">
     <div class="page-header__wrapper container">
+      <nav class="page-header__nav navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item"><a href="#about" class="navigation__link">Обо мне</a></li>
+          <li class="navigation__item"><a href="#projects" class="navigation__link">Проекты</a></li>
+        </ul>
+      </nav>
       <div class="page-header__contacts contacts">
         <p class="contacts__text">Телефон: <a href="tel:+79123918684" class="contacts__link">+7 912 391 86 84</a></p>
         <p class="contacts__text">Email: <a href="mailto:a.vafin85@gmail.com"
@@ -90,13 +96,23 @@
       </div>
       <div class="card__wrapper card__wrapper--image">
         <div class="card__image card__image--desktop">
-          <img src="img/project_5_desktop@1x.jpg" width="348" height="261" alt="" class="card__picture">
+          <picture>
+            <source media="(min-width: 1300px)"
+              srcset="img/project_5_desktop@1x.jpg 1x, img/project_5_desktop@2x.jpg 2x">
+            <img src="img/project_5_desktop_mob@1x.jpg" alt="Фото декстоп версии" class="card__picture">
+          </picture>
         </div>
         <div class="card__image card__image--tablet">
-          <img src="img/project_5_tablet@1x.jpg" width="348" height="261" alt="" class="card__picture">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/project_5_tablet@1x.jpg 1x, img/project_5_tablet@2x.jpg 2x">
+            <img src="img/project_5_tablet_mob@1x.jpg" alt="Фото планшетной версии" class="card__picture">
+          </picture>
         </div>
         <div class="card__image card__image--mobile">
-          <img src="img/project_5_mobile@1x.jpg" width="148" height="261" alt="" class="card__picture">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/project_5_mobile@1x.jpg 1x, img/project_5_mobile@2x.jpg 2x">
+            <img src="img/project_5_mobile_mob@1x.jpg" alt="Фото мобильной версии" class="card__picture">
+          </picture>
         </div>
       </div>
     </section>
