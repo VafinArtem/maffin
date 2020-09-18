@@ -11,17 +11,21 @@
 
 .card__wrapper {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto) 1fr;
+  row-gap: 15px;
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(2, auto) 1fr;
     grid-template-rows: auto 1fr;
-    column-gap: 15px;
+    grid-template-columns: repeat(2, auto) 1fr;
     row-gap: 20px;
+    column-gap: 15px;
   }
 
   &--image {
     grid-row: 2/3;
     grid-template-rows: repeat(3, min-content);
+    grid-template-columns: auto;
     row-gap: 24px;
 
     @media (min-width: $desktop-width) {
@@ -34,6 +38,10 @@
 
 .card__title {
   padding: 0;
+
+  @media (max-width: $mobile-width-only) {
+    grid-column: 1/-1;
+  }
 }
 
 .card__text {
@@ -46,11 +54,16 @@
 }
 
 .card__link {
+  grid-row: 2/3;
+  align-self: end;
   display: block;
   font-size: 19px;
   line-height: 20px;
   color: $basic-black;
-  align-self: end;
+
+  @media (max-width: $mobile-width-only) {
+    text-align: center;
+  }
 
   &:hover,
   &:focus {
@@ -69,6 +82,27 @@
   border-radius: 10px;
   box-shadow: 0 6px 10px transparentize($basic-black, 0.8);
 
+  &::before {
+    @include pseudo;
+    top: -15px;
+    left: -15px;
+    width: 40px;
+    height: 40px;
+    background-color: $basic-white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px auto;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 6px 10px transparentize($basic-black, 0.8);
+
+    @media (min-width: $desktop-width) {
+      width: 50px;
+      height: 50px;
+      background-size: 30px auto;
+    }
+  }
+
   &--desktop {
     @media (min-width: $desktop-width) {
       width: 348px;
@@ -76,19 +110,7 @@
     }
 
     &::before {
-      @include pseudo;
-      top: -15px;
-      left: -15px;
-      width: 50px;
-      height: 50px;
-      background-color: $basic-white;
       background-image: url("../../img/icon-pc.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 30px auto;
-      border-radius: 50%;
-      z-index: 10;
-      box-shadow: 0 6px 10px transparentize($basic-black, 0.8);
     }
   }
 
@@ -99,19 +121,7 @@
     }
 
     &::before {
-      @include pseudo;
-      top: -15px;
-      left: -15px;
-      width: 50px;
-      height: 50px;
-      background-color: $basic-white;
       background-image: url("../../img/icon-tablet.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 30px auto;
-      border-radius: 50%;
-      z-index: 10;
-      box-shadow: 0 6px 10px transparentize($basic-black, 0.8);
     }
   }
 
@@ -122,24 +132,14 @@
     }
 
     &::before {
-      @include pseudo;
-      top: -15px;
-      left: -15px;
-      width: 50px;
-      height: 50px;
-      background-color: $basic-white;
       background-image: url("../../img/icon-mobile.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 30px auto;
-      border-radius: 50%;
-      z-index: 10;
-      box-shadow: 0 6px 10px transparentize($basic-black, 0.8);
     }
   }
 }
 
 .card__picture {
   display: block;
+  width: 100%;
+  object-fit: cover;
   border-radius: 10px;
 }
