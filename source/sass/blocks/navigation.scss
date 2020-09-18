@@ -10,6 +10,8 @@
 .navigation__list {
   @include list-none;
   display: grid;
+  align-items: center;
+  justify-items: center;
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(2, auto);
@@ -18,9 +20,14 @@
 }
 
 .navigation__link {
-  font-size: 19px;
-  line-height: 20px;
   color: $basic-black;
+  font-size: 26px;
+  line-height: 30px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 19px;
+    line-height: 20px;
+  }
 
   &:hover,
   &:focus {
