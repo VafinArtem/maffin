@@ -39,8 +39,17 @@
 .card__title {
   padding: 0;
 
+  &--screen {
+    display: none;
+  }
+
   @media (max-width: $mobile-width-only) {
     grid-column: 1/-1;
+
+    &--screen {
+      display: block;
+      padding-top: 10px;
+    }
   }
 }
 
