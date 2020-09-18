@@ -2,6 +2,8 @@
   @include list-none;
 
   display: grid;
+  grid-template-rows: auto;
+  gap: 24px;
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
@@ -21,13 +23,22 @@
     opacity: 1;
 
     & .projects__desc {
-      display: block;
+      @media (min-width: $desktop-width) {
+        display: block;
+      }
     }
   }
 }
 
 .projects__img {
   display: block;
+  width: 100%;
+  object-fit: cover;
+
+  @media (min-width: $desktop-width) {
+    width: 292px;
+    height: auto;
+  }
 }
 
 .projects__desc {
