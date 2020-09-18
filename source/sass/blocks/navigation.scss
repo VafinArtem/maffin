@@ -1,8 +1,20 @@
+.navigation {
+  display: grid;
+  grid-template-rows: auto;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
 .navigation__list {
   @include list-none;
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 15px;
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(2, auto);
+    gap: 15px;
+  }
 }
 
 .navigation__link {
