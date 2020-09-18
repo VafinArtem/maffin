@@ -1,10 +1,16 @@
 .properties {
   display: grid;
-  grid-template-columns: 150px 1fr;
-  grid-template-rows: repeat(4, auto);
+  grid-template-columns: auto;
+  grid-template-rows: repeat(10, auto);
+
   gap: 10px;
   margin: 0;
   padding-top: 25px;
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
 }
 
 .properties__desc {
