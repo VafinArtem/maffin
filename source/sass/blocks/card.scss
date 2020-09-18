@@ -29,6 +29,7 @@
     row-gap: 24px;
 
     @media (min-width: $desktop-width) {
+      grid-row: 1/2;
       grid-template-columns: repeat(3, min-content);
       column-gap: 50px;
       row-gap: 0;
@@ -37,6 +38,8 @@
 }
 
 .card__title {
+  grid-column: 1/2;
+  grid-row: 1/2;
   padding: 0;
 
   &--screen {
@@ -63,7 +66,7 @@
 }
 
 .card__link {
-  grid-row: 2/3;
+  grid-row: 1/2;
   align-self: end;
   display: block;
   font-size: 19px;
@@ -71,6 +74,7 @@
   color: $basic-black;
 
   @media (max-width: $mobile-width-only) {
+    grid-row: 2/3;
     text-align: center;
   }
 
