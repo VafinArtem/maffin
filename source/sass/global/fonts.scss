@@ -1,25 +1,9 @@
-// @font-face {
-//   font-family: "Oswald";
-//   src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
-//   font-weight: 400;
-//   font-style: normal;
-//   font-display: swap;
-// }
-
-// @font-face {
-//   font-family: "Oswald";
-//   src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
-//   font-weight: 500;
-//   font-style: medium;
-//   font-display: swap;
-// }
-
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 100;
   font-display: swap;
-  src: url("../fonts/roboto-thin.woff2") format("woff2"), url("../fonts/roboto-thin.woff") format("woff");
+  src: url("../../fonts/Roboto-Thin.woff2") format("woff2"), url("../../fonts/Roboto-Thin.woff") format("woff");
 }
 
 @font-face {
@@ -27,7 +11,7 @@
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url("../fonts/roboto-light.woff2") format("woff2"), url("../fonts/roboto-light.woff") format("woff");
+  src: url("../../fonts/Roboto-Light.woff2") format("woff2"), url("../../fonts/Roboto-Light..woff") format("woff");
 }
 
 @font-face {
@@ -35,7 +19,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/roboto-regular.woff2") format("woff2"), url("../fonts/roboto-regular.woff") format("woff");
+  src: url("../../fonts/roboto-regular.woff2") format("woff2"), url("../../fonts/roboto-regular.woff") format("woff");
 }
 
 @font-face {
@@ -43,7 +27,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("../fonts/roboto-medium.woff2") format("woff2"), url("../fonts/roboto-medium.woff") format("woff");
+  src: url("../../fonts/roboto-medium.woff2") format("woff2"), url("..../fonts/roboto-medium.woff") format("woff");
 }
 
 @font-face {
@@ -51,5 +35,5 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../fonts/roboto-bold.woff2") format("woff2"), url("../fonts/roboto-bold.woff") format("woff");
+  src: url("../../fonts/roboto-bold.woff2") format("woff2"), url("../../fonts/roboto-bold.woff") format("woff");
 }

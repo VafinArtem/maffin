@@ -310,18 +310,6 @@ html [type="button"],
   /* 2 */
 }
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  /**
-       * Remove the inner border and padding in Firefox.
-       */
-  /**
-       * Restore the focus styles unset by the previous rule.
-       */
-}
-
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -511,7 +499,7 @@ template {
   font-style: normal;
   font-weight: 100;
   font-display: swap;
-  src: url("../fonts/roboto-thin.woff2") format("woff2"), url("../fonts/roboto-thin.woff") format("woff");
+  src: url("../fonts/Roboto-Thin.woff2") format("woff2"), url("../fonts/Roboto-Thin.woff") format("woff");
 }
 
 @font-face {
@@ -519,7 +507,7 @@ template {
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url("../fonts/roboto-light.woff2") format("woff2"), url("../fonts/roboto-light.woff") format("woff");
+  src: url("../fonts/Roboto-Light.woff2") format("woff2"), url("../../fonts/Roboto-Light..woff") format("woff");
 }
 
 @font-face {
@@ -535,7 +523,7 @@ template {
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("../fonts/roboto-medium.woff2") format("woff2"), url("../fonts/roboto-medium.woff") format("woff");
+  src: url("../fonts/roboto-medium.woff2") format("woff2"), url("..../fonts/roboto-medium.woff") format("woff");
 }
 
 @font-face {
@@ -1250,4 +1238,3 @@ a {
   color: #008272;
   opacity: 0.3;
 }
-
