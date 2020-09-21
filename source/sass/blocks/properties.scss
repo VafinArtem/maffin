@@ -1,0 +1,28 @@
+.properties {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(10, auto);
+
+  gap: 10px;
+  margin: 0;
+  padding-top: 25px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
+}
+
+.properties__desc {
+  margin: 0;
+}
+
+.properties__item {
+  font-weight: 400;
+}
+
+.properties__desc,
+.properties__item {
+  font-size: 16px;
+  line-height: 20px;
+}

@@ -1,0 +1,28 @@
+.page-main {
+  padding-top: 40px;
+  background-color: $special-blue;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 60px;
+  }
+}
+
+.page-main__title {
+  margin: 0;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 44px;
+}
+
+.page-main__about {
+  background-color: $special-blue;
+  padding-top: 40px;
+}
+
+.page-main__projects {
+  padding-top: 40px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 60px;
+  }
+}

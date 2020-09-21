@@ -1,18 +1,8 @@
-.social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 25px;
-}
-
 .social__list {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 155px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  @include list-none;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 15px;
 }
 
 .social__item {
@@ -22,20 +12,26 @@
 }
 
 .social__img {
-  fill: #3f2d20;
+  display: block;
+  fill: $basic-black;
+
+  @media (min-width: $desktop-width) {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .social__link {
   &:hover,
   &:focus {
     .social__img {
-      fill: #008272;
+      fill: $basic-green;
     }
   }
 
   &:active {
     .social__img {
-      fill: transparentize(#008272, 0.3);
+      fill: transparentize($basic-green, 0.7);
     }
   }
 }

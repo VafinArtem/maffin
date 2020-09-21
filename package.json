@@ -20,6 +20,7 @@
     "gulp-svgstore": "7.0.*",
     "gulp-uglify-es": "^2.0.*",
     "gulp-webp": "4.0.*",
+    "normalize-scss": "^7.0.1",
     "stylelint": "13.*.*",
     "stylelint-config-htmlacademy": "0.1.*"
   },
