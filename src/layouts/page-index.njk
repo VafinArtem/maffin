@@ -24,7 +24,7 @@
       <h2 class="projects__title title">Проекты</h2>
       <ul class="projects__list">
 
-      {%- for card in collections.cards -%}
+      {%- for card in collections.cards | reverse -%}
         <li class="projects__item">
           <a href="{{ card.url }}" class="projects__link">
             <picture>
