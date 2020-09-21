@@ -7,4 +7,7 @@ javascript: "Мобильное меню / Модальное окно"
 layouts: "Главная / Каталог / Форма"
 release: "сентябрь 2020"
 period: "1 неделя"
+desktop: "project_5_desktop"
+tablet: "project_5_tablet"
+mobile: "project_5_mobile"
 ---
