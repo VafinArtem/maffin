@@ -23,59 +23,24 @@
     <section class="page-main__projects projects container" id="projects">
       <h2 class="projects__title title">Проекты</h2>
       <ul class="projects__list">
+
+      {%- for card in collections.cards -%}
         <li class="projects__item">
-          <a href="project-7.html" class="projects__link">
+          <a href="{{ card.url }}" class="projects__link">
             <picture>
               <source media="(min-width: 1300px)" type="image/webp"
-                srcset="img/project_5_card_desktop@1x.webp 1x, img/project_5_card_desktop@2x.webp 2x">
+                srcset="img/{{ card.data.img }}_desktop@1x.webp 1x, img/{{ card.data.img }}_desktop@2x.webp 2x">
               <source media="(min-width: 320px)" type="image/webp"
-                srcset="img/project_5_card_mobile@1x.webp 1x, img/project_5_card_mobile@2x.webp 2x">
+                srcset="img/{{ card.data.img }}_mobile@1x.webp 1x, img/{{ card.data.img }}_mobile@2x.webp 2x">
               <source media="(min-width: 1300px)"
-                srcset="img/project_5_card_desktop@1x.jpg 1x, img/project_5_card_desktop@2x.jpg 2x">
-              <img src="img/project_5_card_mobile@1x.jpg" alt="Фото проекта Мишка" class="projects__img"
-                srcset="img/project_5_card_mobile@2x.jpg 2x">
+                srcset="img/{{ card.data.img }}_desktop@1x.jpg 1x, img/{{ card.data.img }}_desktop@2x.jpg 2x">
+              <img src="img/{{ card.data.img }}_mobile@1x.jpg" alt="Фото проекта Мишка" class="projects__img"
+                srcset="img/{{ card.data.img }}_mobile@2x.jpg 2x">
             </picture>
           </a>
         </li>
-        <li class="projects__item">
-          <a href="#" class="projects__link">
-            <picture>
-              <source media="(min-width: 1300px)" type="image/webp"
-                srcset="img/project_5_card_desktop@1x.webp 1x, img/project_5_card_desktop@2x.webp 2x">
-              <source media="(min-width: 320px)" type="image/webp"
-                srcset="img/project_5_card_mobile@1x.webp 1x, img/project_5_card_mobile@2x.webp 2x">
-              <source media="(min-width: 1300px)"
-                srcset="img/project_5_card_desktop@1x.jpg 1x, img/project_5_card_desktop@2x.jpg 2x">
-              <img src="img/project_5_card_mobile@1x.jpg" alt="Фото проекта Мишка" class="projects__img">
-            </picture>
-          </a>
-        </li>
-        <li class="projects__item">
-          <a href="project-5.html" class="projects__link">
-            <picture>
-              <source media="(min-width: 1300px)" type="image/webp"
-                srcset="img/project_5_card_desktop@1x.webp 1x, img/project_5_card_desktop@2x.webp 2x">
-              <source media="(min-width: 320px)" type="image/webp"
-                srcset="img/project_5_card_mobile@1x.webp 1x, img/project_5_card_mobile@2x.webp 2x">
-              <source media="(min-width: 1300px)"
-                srcset="img/project_5_card_desktop@1x.jpg 1x, img/project_5_card_desktop@2x.jpg 2x">
-              <img src="img/project_5_card_mobile@1x.jpg" alt="Фото проекта Мишка" class="projects__img">
-            </picture>
-          </a>
-        </li>
-        <li class="projects__item">
-          <a href="#" class="projects__link">
-            <picture>
-              <source media="(min-width: 1300px)" type="image/webp"
-                srcset="img/project_5_card_desktop@1x.webp 1x, img/project_5_card_desktop@2x.webp 2x">
-              <source media="(min-width: 320px)" type="image/webp"
-                srcset="img/project_5_card_mobile@1x.webp 1x, img/project_5_card_mobile@2x.webp 2x">
-              <source media="(min-width: 1300px)"
-                srcset="img/project_5_card_desktop@1x.jpg 1x, img/project_5_card_desktop@2x.jpg 2x">
-              <img src="img/project_5_card_mobile@1x.jpg" alt="Фото проекта Мишка" class="projects__img">
-            </picture>
-          </a>
-        </li>
+      {%- endfor -%}
+
       </ul>
     </section>
   </main>
