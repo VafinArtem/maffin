@@ -9,5 +9,6 @@
 build/
 node_modules/
 _site/
+source/img_new/
 npm-debug.*
 Thumbs.db
