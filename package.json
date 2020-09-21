@@ -22,7 +22,8 @@
     "gulp-webp": "4.0.*",
     "normalize-scss": "^7.0.1",
     "stylelint": "13.*.*",
-    "stylelint-config-htmlacademy": "0.1.*"
+    "stylelint-config-htmlacademy": "0.1.*",
+    "vinyl-ftp": "^0.6.1"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
