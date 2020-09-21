@@ -1,0 +1,16 @@
+---
+layout: "page-card.njk"
+link: ""
+title: ""
+about: ""
+technology: ""
+javascript: ""
+layouts: ""
+release: ""
+period: ""
+desktop: "project_%_desktop"
+tablet: "project_%_tablet"
+mobile: "project_%_mobile"
+tags: "cards"
+img: "project_%_card"
+---

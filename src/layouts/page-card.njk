@@ -1,0 +1,67 @@
+{% include "header-card.njk" %}
+
+<main class="page-main">
+    <section class="page-main__card card container" id="about">
+      <div class="card__wrapper">
+        <h2 class="card__title title">{{ title }}</h2>
+        <a href="../../projects/{{ link }}/" class="card__link">Link</a>
+        <a href="https://github.com/VafinArtem/1394233-mishka-20" class="card__link">Git</a>
+        <p class="card__text">
+          {{ about }}
+        </p>
+        <dl class="card__desc properties">
+          <dt class="properties__item">Технологии</dt>
+          <dd class="properties__desc">{{ technology }}</dd>
+          <dt class="properties__item">JavaScript</dt>
+          <dd class="properties__desc">{{ javascript }}</dd>
+          <dt class="properties__item">Сверстано</dt>
+          <dd class="properties__desc">{{ layouts }}</dd>
+          <dt class="properties__item">Реализация</dt>
+          <dd class="properties__desc">{{ release }}</dd>
+          <dt class="properties__item">Срок верстки</dt>
+          <dd class="properties__desc">{{ period }}</dd>
+        </dl>
+      </div>
+      <div class="card__wrapper card__wrapper--image">
+        <h2 class="card__title card__title--screen title" id="screen">Скриншоты</h2>
+        <div class="card__image card__image--desktop">
+        <picture>
+            <source media="(min-width: 1300px)" type="image/webp"
+              srcset="../../img/{{desktop}}@1x.webp 1x, ../../img/{{desktop}}@2x.webp 2x">
+            <source media="(min-width: 320px)" type="image/webp"
+              srcset="../../img/{{desktop}}_mob@1x.webp 1x, ../../img/{{desktop}}_mob@2x.webp 2x">
+            <source media="(min-width: 1300px)"
+              srcset="../../img/{{desktop}}@1x.jpg 1x, ../../img/{{desktop}}@2x.jpg 2x">
+            <img src="../../img/{{desktop}}_mob@1x.jpg" alt="Фото декстоп версии" class="card__picture"
+              srcset="../../img/{{desktop}}_mob@2x.jpg 2x">
+          </picture>
+        </div>
+        <div class="card__image card__image--tablet">
+          <picture>
+            <source media="(min-width: 1300px)" type="image/webp"
+              srcset="../../img/{{tablet}}_mob@1x.webp 1x, ../../img/{{tablet}}_mob@2x.webp 2x">
+            <source media="(min-width: 320px)" type="image/webp"
+              srcset="../../img/{{tablet}}_mob@1x.webp 1x, ../../img/{{tablet}}_mob@2x.webp 2x">
+            <source media="(min-width: 1300px)"
+              srcset="../../img/{{tablet}}@1x.jpg 1x, ../../img/{{tablet}}@2x.jpg 2x">
+            <img src="../../img/{{tablet}}_mob@1x.jpg" alt="Фото планшетной версии" class="card__picture"
+              srcset="../../img/{{tablet}}_mob@2x.jpg 2x">
+          </picture>
+        </div>
+        <div class="card__image card__image--mobile">
+          <picture>
+            <source media="(min-width: 1300px)" type="image/webp"
+              srcset="../../img/{{mobile}}_mob@1x.webp 1x, ../../img/{{mobile}}_mob@2x.webp 2x">
+            <source media="(min-width: 320px)" type="image/webp"
+              srcset="../../img/{{mobile}}_mob@1x.webp 1x, ../../img/{{mobile}}_mob@2x.webp 2x">
+            <source media="(min-width: 1300px)"
+              srcset="../../img/{{mobile}}@1x.jpg 1x, ../../img/{{mobile}}@2x.jpg 2x">
+            <img src="../../img/{{mobile}}_mob@1x.jpg" alt="Фото мобильной версии" class="card__picture"
+              srcset="../../img/{{mobile}}_mob@2x.jpg 2x">
+          </picture>
+        </div>
+      </div>
+    </section>
+  </main>
+
+{% include "footer.njk" %}
