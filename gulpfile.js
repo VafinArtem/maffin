@@ -4,7 +4,7 @@ const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
-const resolveUrl = require('gulp-resolve-url');
+const resolveUrl = require("gulp-resolve-url");
 const sync = require("browser-sync").create();
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
@@ -14,6 +14,7 @@ const imagemin = require("gulp-imagemin");
 const svgstore = require("gulp-svgstore");
 const webp = require("gulp-webp");
 const del = require("del");
+const ftp = require("vinyl-ftp");
 
 // Styles
 
@@ -112,6 +113,30 @@ const js = () => {
 }
 
 exports.js = js;
+
+// ftp
+
+const deploy = () => {
+  const conn = ftp.create({
+    host: "31.31.196.213",
+    user: "u1107651",
+    password: "_Rhv0raK",
+    parallel: 10,
+  });
+
+  const globs = [
+    "_site/**"
+  ];
+
+  return gulp.src(globs, {
+    base: "./_site",
+    buffer: false
+  })
+    .pipe(conn.newer("www/maffin.pw"))
+    .pipe(conn.dest("www/maffin.pw"));
+}
+
+exports.deploy = deploy;
 
 // Delete
 
