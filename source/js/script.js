@@ -1,14 +1,15 @@
-<!-- Yandex.Metrika counter -->
+let upButton = document.querySelector(".page-up");
 
-(function (m, e, t, r, i, k, a) {
-  m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-  m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-})
-  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-ym(66713680, "init", {
-  clickmap: true,
-  trackLinks: true,
-  accurateTrackBounce: true,
-  webvisor: true
+window.addEventListener("scroll", function (evt) {
+  if (window.pageYOffset > 200) {
+    upButton.classList.add("page-up--active");
+  }
+  else {
+    upButton.classList.remove("page-up--active");
+  }
+});
+
+upButton.addEventListener("click", function (evt) {
+  window.scrollTo(0, 0)
 });
