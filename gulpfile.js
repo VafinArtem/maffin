@@ -91,6 +91,19 @@ const copy = () => {
 
 exports.copy = copy;
 
+// Copy Image to 11ty
+
+const copyImg = () => {
+  return gulp.src([
+    "source/img/**"
+  ], {
+    base: "source"
+  })
+    .pipe(gulp.dest("src"))
+}
+
+exports.copyImg = copyImg;
+
 // HTML
 
 const html = () => {
