@@ -1,0 +1,15 @@
+.content {
+  & p {
+    margin: 0;
+  }
+
+  & a {
+    color: $basic-black;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: $basic-green;
+    }
+  }
+}

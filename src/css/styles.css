@@ -987,8 +987,13 @@ a {
   margin: 0;
 }
 
+.card__content {
+  grid-column: 1/-1;
+}
+
 .card__desc {
   grid-column: 1/-1;
+  padding-top: 25px;
 }
 
 .card__link {
@@ -1098,19 +1103,39 @@ a {
   border-radius: 10px;
 }
 
+.content p {
+  margin: 0;
+}
+
+.content a {
+  color: #3f2d20;
+  text-decoration: underline;
+}
+
+.content a:hover,
+.content a:focus {
+  color: #008272;
+}
+
 .properties {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: repeat(10, auto);
   gap: 10px;
   margin: 0;
-  padding-top: 25px;
 }
 
 @media (min-width: 768px) {
   .properties {
     grid-template-columns: 150px 1fr;
     grid-template-rows: repeat(4, auto);
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .properties {
+    width: 80%;
   }
 }
 

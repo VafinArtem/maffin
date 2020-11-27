@@ -68,8 +68,13 @@
   margin: 0;
 }
 
+.card__content {
+  grid-column: 1/-1;
+}
+
 .card__desc {
   grid-column: 1/-1;
+  padding-top: 25px;
 }
 
 .card__link {
