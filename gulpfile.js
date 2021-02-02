@@ -51,7 +51,7 @@ const images = () => {
         ]
       })
     ]))
-    .pipe(gulp.dest("source/img"))
+    .pipe(gulp.dest("source/img/"))
 }
 
 exports.images = images;
@@ -59,10 +59,10 @@ exports.images = images;
 // Sprite
 
 const sprite = () => {
-  return gulp.src("source/img/**/icon-*.svg")
+  return gulp.src("source/img/svg/icon-*.svg")
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("source/img/svg"))
 }
 
 exports.sprite = sprite;
