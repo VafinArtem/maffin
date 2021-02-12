@@ -24,21 +24,8 @@
 
 (() => {
   const sliderNode = document.querySelector(`.js-slider`);
-  const sliderItemsNode = sliderNode.querySelectorAll(`.js-slide`);
-  const sliderArrowPrev = sliderNode.querySelector(`.js-slider-arr-prev`);
-  const sliderArrowNext = sliderNode.querySelector(`.js-slider-arr-next`);
 
-  const disabledButton = (buttonElement) => {
-    buttonElement.setAttribute(`disabled`, `disabled`);
-    // buttonElement.classList.add(`slider__btn--not-active`);
-  };
-
-  const enabledButton = (buttonElement) => {
-    buttonElement.removeAttribute(`disabled`);
-    // buttonElement.classList.remove(`slider__btn--not-active`);
-  };
-
-  const iterating = (items, direction) => {
+  const iterating = (items, direction, buttonPrev, buttonNext) => {
     let nextSlide = null;
     let nextSlideClass = null;
     let prevSlideClass = null;
@@ -57,9 +44,9 @@
         }
 
         if (direction === `left`) {
-          items[nextSlide+2] !== undefined ? items[nextSlide+2].classList.toggle(prevSlideClass) : enabledButton(sliderArrowNext);
+          items[nextSlide+2] !== undefined ? items[nextSlide+2].classList.toggle(prevSlideClass) : enabledButton(buttonNext);
         } else {
-          items[nextSlide-2] !== undefined ? items[nextSlide-2].classList.toggle(prevSlideClass) : enabledButton(sliderArrowPrev);
+          items[nextSlide-2] !== undefined ? items[nextSlide-2].classList.toggle(prevSlideClass) : enabledButton(buttonPrev);
         }
 
         items[i].classList.remove(`js-slide-active`);
@@ -69,20 +56,34 @@
         items[nextSlide].classList.add(`js-slide-active`);
 
         if (direction === `left`) {
-          items[nextSlide-1] === undefined ? disabledButton(sliderArrowPrev) : items[nextSlide-1].classList.add(nextSlideClass);
+          items[nextSlide-1] === undefined ? disabledButton(buttonPrev) : items[nextSlide-1].classList.add(nextSlideClass);
         } else {
-          items[nextSlide+1] === undefined ? disabledButton(sliderArrowNext) : items[nextSlide+1].classList.add(nextSlideClass);
+          items[nextSlide+1] === undefined ? disabledButton(buttonNext) : items[nextSlide+1].classList.add(nextSlideClass);
         }
         break;
       }
     }
   };
 
-  sliderArrowNext.addEventListener(`click`, () => {
-    iterating(sliderItemsNode, `right`);
-  });
+  const disabledButton = (buttonElement) => {
+    buttonElement.setAttribute(`disabled`, `disabled`);
+  };
 
-  sliderArrowPrev.addEventListener(`click`, () => {
-    iterating(sliderItemsNode, `left`);
-  });
+  const enabledButton = (buttonElement) => {
+    buttonElement.removeAttribute(`disabled`);
+  };
+
+  if (sliderNode) {
+    const sliderItemsNode = sliderNode.querySelectorAll(`.js-slide`);
+    const sliderArrowPrev = sliderNode.querySelector(`.js-slider-arr-prev`);
+    const sliderArrowNext = sliderNode.querySelector(`.js-slider-arr-next`);
+
+    sliderArrowNext.addEventListener(`click`, () => {
+      iterating(sliderItemsNode, `right`, sliderArrowPrev, sliderArrowNext);
+    });
+
+    sliderArrowPrev.addEventListener(`click`, () => {
+      iterating(sliderItemsNode, `left`, sliderArrowPrev, sliderArrowNext);
+    });
+  }
 })()
