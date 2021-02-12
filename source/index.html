@@ -24,8 +24,9 @@
         </ul>
       </nav>
       <div class="page-header__contacts contacts">
-        <p class="contacts__text">Телефон: <a href="tel:+79123918684" class="contacts__link">+7 912 391 86 84</a></p>
-        <p class="contacts__text">Email: <a href="mailto:a.vafin85@gmail.com"
+        <p class="contacts__text">Телефон:&nbsp;<a href="tel:+79123918684" class="contacts__link">+7 912 391 86 84</a>
+        </p>
+        <p class="contacts__text">Email:&nbsp;<a href="mailto:a.vafin85@gmail.com"
             class="contacts__link">a.vafin85@gmail.com</a></p>
       </div>
       <div class="page-header__logo logo">
@@ -189,16 +190,30 @@
       <div class="popup__gallery gallery js-slider">
         <ul class="gallery__list">
           <li class="gallery__item js-slide js-slide-active">
-            <img src="/img/html_1@1x.jpg" width="500" height="700" alt="" class="gallery__img">
+            <picture>
+              <source type="image/webp" srcset="img/html_1@1x.webp 1x, img/html_1@2x.webp 2x">
+              <img src="/img/html_1@1x.jpg" width="500" height="700" alt="Сертификат о прохождение курса"
+                class="gallery__img" src="img/html_1@2x.jpg 2x">
+            </picture>
           </li>
           <li class="gallery__item js-slide js-slide-next">
-            <img src="/img/html_2@1x.jpg" width="500" height="700" alt="" class="gallery__img">
+            <picture>
+              <source type="image/webp" srcset="img/html_2@1x.webp 1x, img/html_2@2x.webp 2x">
+              <img src="/img/html_2@1x.jpg" width="500" height="700" alt="" class="gallery__img"
+                src="img/html_2@2x.jpg 2x">
+            </picture>
           </li>
           <li class="gallery__item js-slide">
-            <img src="/img/js_1@1x.jpg" width="500" height="700" alt="" class="gallery__img">
+            <picture>
+              <source type="image/webp" srcset="img/js_1@1x.webp 1x, img/js_1@2x.webp 2x">
+              <img src="/img/js_1@1x.jpg" width="500" height="700" alt="" class="gallery__img" src="img/js_1@2x.jpg 2x">
+            </picture>
           </li>
           <li class="gallery__item js-slide">
-            <img src="/img/js_2@1x.jpg" width="500" height="700" alt="" class="gallery__img">
+            <picture>
+              <source type="image/webp" srcset="img/js_2@1x.webp 1x, img/js_2@2x.webp 2x">
+              <img src="/img/js_2@1x.jpg" width="500" height="700" alt="" class="gallery__img" src="img/js_2@2x.jpg 2x">
+            </picture>
           </li>
         </ul>
         <div class="gallery__controls">
