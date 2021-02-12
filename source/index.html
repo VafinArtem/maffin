@@ -189,24 +189,24 @@
   </div>
   <section class="popup">
     <div class="popup__wrapper">
-      <div class="popup__gallery gallery">
+      <div class="popup__gallery gallery js-slider">
         <ul class="gallery__list">
-          <li class="gallery__item">
+          <li class="gallery__item js-slide js-slide-active">
             <img src="/img/html_1@1x.jpg" width="500" height="700" alt="" class="gallery__img">
           </li>
-          <li class="gallery__item">
+          <li class="gallery__item js-slide js-slide-next">
             <img src="/img/html_2@1x.jpg" width="500" height="700" alt="" class="gallery__img">
           </li>
-          <li class="gallery__item">
+          <li class="gallery__item js-slide">
             <img src="/img/js_1@1x.jpg" width="500" height="700" alt="" class="gallery__img">
           </li>
-          <li class="gallery__item">
+          <li class="gallery__item js-slide">
             <img src="/img/js_2@1x.jpg" width="500" height="700" alt="" class="gallery__img">
           </li>
         </ul>
         <div class="gallery__controls">
-          <button class="gallery__button">Назад</button>
-          <button class="gallery__button">Вперёд</button>
+          <button class="gallery__button js-slider-arr-prev" disabled>Назад</button>
+          <button class="gallery__button js-slider-arr-next">Вперёд</button>
         </div>
       </div>
     </div>
