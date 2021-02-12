@@ -104,6 +104,32 @@ const copyImg = () => {
 
 exports.copyImg = copyImg;
 
+// Copy Style to 11ty
+
+const copyStyle = () => {
+  return gulp.src([
+    "build/css/**"
+  ], {
+    base: "build"
+  })
+    .pipe(gulp.dest("src"))
+}
+
+exports.copyStyle = copyStyle;
+
+// Copy JS to 11ty
+
+const copyJS = () => {
+  return gulp.src([
+    "build/js/**"
+  ], {
+    base: "build"
+  })
+    .pipe(gulp.dest("src"))
+}
+
+exports.copyJS = copyJS;
+
 // HTML
 
 const html = () => {
