@@ -28,6 +28,10 @@
 
 .gallery__controls {
   margin-top: 15px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 7px;
+  }
 }
 
 .gallery__button {
