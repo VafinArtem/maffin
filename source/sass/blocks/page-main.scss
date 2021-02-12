@@ -7,16 +7,26 @@
   }
 }
 
+.page-main__wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .page-main__title {
   margin: 0;
+  margin-left: 15px;
   font-weight: 300;
   font-size: 40px;
-  line-height: 44px;
+  line-height: 1.3;
+
+  @media (max-width: $mobile-width-only) {
+    margin-left: 8;
+    font-size: 24px;
+  }
 }
 
 .page-main__about {
   background-color: $special-blue;
-  padding-top: 40px;
 }
 
 .page-main__projects {
