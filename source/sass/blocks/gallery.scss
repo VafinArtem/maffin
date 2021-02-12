@@ -19,3 +19,22 @@
   height: auto;
   object-fit: contain;
 }
+
+.gallery__controls {
+  margin-top: 15px;
+}
+
+.gallery__button {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: $basic-black;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $basic-green;
+  }
+}

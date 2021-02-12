@@ -45,7 +45,8 @@
   color: $basic-black;
   text-decoration: underline;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $basic-green;
   }
 }
