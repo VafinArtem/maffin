@@ -14,7 +14,7 @@
   <link href="css/styles.min.css" rel="stylesheet">
 </head>
 
-<body class="overflow-h">
+<body>
   <header class="page-header">
     <div class="page-header__wrapper container">
       <nav class="page-header__nav navigation">
@@ -87,7 +87,7 @@
         </p>
       </div>
       <div class="about__wrapper about__wrapper--text">
-        <a href="#" class="about__link">Сертификаты</a>
+        <a href="#" class="about__link js-open-popup">Сертификаты</a>
       </div>
     </section>
     <section class="page-main__projects projects container" id="projects">
@@ -187,8 +187,9 @@
       </svg>
     </button>
   </div>
-  <section class="popup">
+  <section class="popup js-popup">
     <div class="popup__wrapper">
+      <button class="popup__close js-close-popup">Закрыть</button>
       <div class="popup__gallery gallery js-slider">
         <ul class="gallery__list">
           <li class="gallery__item js-slide js-slide-active">
