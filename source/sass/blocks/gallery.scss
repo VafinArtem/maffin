@@ -65,4 +65,8 @@
       color: $basic-gray;
     }
   }
+
+  &:first-child {
+    margin-right: 10px;
+  }
 }
