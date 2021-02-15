@@ -1361,6 +1361,8 @@ a {
   position: fixed;
   left: 50%;
   top: 50%;
+  width: 50%;
+  max-width: 650px;
   padding: 50px;
   padding-top: 25px;
   padding-bottom: 25px;
