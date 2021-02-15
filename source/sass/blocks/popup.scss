@@ -25,6 +25,13 @@
   padding-top: 40px;
   padding-bottom: 0;
   transform: translate(-50%, -50%);
+
+  @media (max-width: $mobile-width-only) {
+    width: 102%;
+    padding: 20px;
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
 }
 
 .popup__close {
@@ -32,6 +39,8 @@
   right: 0;
   top: 13px;
   display: flex;
+  width: 32px;
+  height: 32px;
   margin-right: 25px;
   padding: 0;
   background-color: transparent;
@@ -42,12 +51,34 @@
   outline: none;
   z-index: 1;
 
+  &::before,
+  &::after {
+    position: absolute;
+    left: 15px;
+    content: "";
+    height: 33px;
+    width: 2px;
+    background-color: $basic-white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+
   &:hover,
   &:focus {
-    color: $basic-green;
+    &::before,
+    &::after {
+      background-color: $basic-green;
+    }
   }
 
   @media (max-width: $mobile-width-only) {
-    top: 13px;
+    top: 6px;
+    margin-right: 8px;
   }
 }
