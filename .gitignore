@@ -12,3 +12,4 @@ _site/
 source/img_new/
 npm-debug.*
 Thumbs.db
+package-lock.json
