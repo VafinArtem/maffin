@@ -1,4 +1,5 @@
 const gulp = require("gulp");
+const webpack = require("webpack-stream");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
@@ -9,7 +10,6 @@ const sync = require("browser-sync").create();
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
-const uglify = require("gulp-uglify-es").default;
 const imagemin = require("gulp-imagemin");
 const svgstore = require("gulp-svgstore");
 const webp = require("gulp-webp");
@@ -145,8 +145,29 @@ exports.html = html;
 
 const js = () => {
   return gulp.src("source/js/script.js")
-    .pipe(rename("script.min.js"))
-    .pipe(uglify())
+    .pipe(
+      webpack({
+        mode: 'production',
+        module: {
+          rules: [
+            {
+                test: /.js$/,
+                exclude: /node_modules/,
+                use: {
+                loader: 'babel-loader',
+                query: {
+                  presets: ["@babel/env"]
+                }
+                },
+            }
+            ],
+        },
+        output: {
+          filename: 'bundle.js',
+        },
+        devtool: 'source-map',
+      })
+    )
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }

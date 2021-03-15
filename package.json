@@ -3,8 +3,12 @@
   "private": true,
   "description": "Сборка для проектов Maffin 0.2",
   "devDependencies": {
+    "@babel/preset-env": "^7.13.10",
     "@htmlacademy/editorconfig-cli": "1.*",
     "autoprefixer": "9.8.*",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-es2015": "^6.24.1",
     "browser-sync": "2.26.*",
     "del": "5.1.*",
     "gulp": "4.0.*",
@@ -23,7 +27,8 @@
     "normalize-scss": "^7.0.1",
     "stylelint": "13.*.*",
     "stylelint-config-htmlacademy": "0.1.*",
-    "vinyl-ftp": "^0.6.1"
+    "vinyl-ftp": "^0.6.1",
+    "webpack-stream": "^6.1.2"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
