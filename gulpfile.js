@@ -19,13 +19,12 @@ const ftp = require("vinyl-ftp");
 // Styles
 
 const styles = () => {
-  return gulp.src("source/sass/style.scss")
+  return gulp
+    .src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
+    .pipe(postcss([autoprefixer()]))
     .pipe(resolveUrl())
     .pipe(rename("styles.css"))
     .pipe(gulp.dest("build/css"))
@@ -33,144 +32,144 @@ const styles = () => {
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
-    .pipe(sync.stream())
-}
+    .pipe(sync.stream());
+};
 
 exports.styles = styles;
 
 // Images
 
 const images = () => {
-  return gulp.src("source/img_new/**/*.{jpg,png,svg}")
-    .pipe(imagemin([
-      imagemin.optipng({ optimizationLevel: 3 }),
-      imagemin.mozjpeg({ quality: 90, progressive: true }),
-      imagemin.svgo({
-        plugins: [
-          { removeViewBox: false }
-        ]
-      })
-    ]))
-    .pipe(gulp.dest("source/img/"))
-}
+  return gulp
+    .src("source/img_new/**/*.{jpg,png,svg}")
+    .pipe(
+      imagemin([
+        imagemin.optipng({ optimizationLevel: 3 }),
+        imagemin.mozjpeg({ quality: 90, progressive: true }),
+        imagemin.svgo({
+          plugins: [{ removeViewBox: false }],
+        }),
+      ])
+    )
+    .pipe(gulp.dest("source/img/"));
+};
 
 exports.images = images;
 
 // Sprite
 
 const sprite = () => {
-  return gulp.src("source/img/svg/icon-*.svg")
+  return gulp
+    .src("source/img/svg/icon-*.svg")
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("source/img/svg"))
-}
+    .pipe(gulp.dest("source/img/svg"));
+};
 
 exports.sprite = sprite;
 
 // WebP
 
 const iwebp = () => {
-  return gulp.src("source/img/**/*.{png,jpg}")
+  return gulp
+    .src("source/img/**/*.{png,jpg}")
     .pipe(webp({ quality: 90 }))
-    .pipe(gulp.dest("source/img"))
-}
+    .pipe(gulp.dest("source/img"));
+};
 
 exports.webp = iwebp;
 
 // Copy
 
 const copy = () => {
-  return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
-    "source/img/**"
-  ], {
-    base: "source"
-  })
-    .pipe(gulp.dest("build"))
-}
+  return gulp
+    .src(["source/fonts/**/*.{woff,woff2}", "source/img/**"], {
+      base: "source",
+    })
+    .pipe(gulp.dest("build"));
+};
 
 exports.copy = copy;
 
 // Copy Image to 11ty
 
 const copyImg = () => {
-  return gulp.src([
-    "source/img/**"
-  ], {
-    base: "source"
-  })
-    .pipe(gulp.dest("src"))
-}
+  return gulp
+    .src(["source/img/**"], {
+      base: "source",
+    })
+    .pipe(gulp.dest("src"));
+};
 
 exports.copyImg = copyImg;
 
 // Copy Style to 11ty
 
 const copyStyle = () => {
-  return gulp.src([
-    "build/css/**"
-  ], {
-    base: "build"
-  })
-    .pipe(gulp.dest("src"))
-}
+  return gulp
+    .src(["build/css/**"], {
+      base: "build",
+    })
+    .pipe(gulp.dest("src"));
+};
 
 exports.copyStyle = copyStyle;
 
 // Copy JS to 11ty
 
 const copyJS = () => {
-  return gulp.src([
-    "build/js/**"
-  ], {
-    base: "build"
-  })
-    .pipe(gulp.dest("src"))
-}
+  return gulp
+    .src(["build/js/**"], {
+      base: "build",
+    })
+    .pipe(gulp.dest("src"));
+};
 
 exports.copyJS = copyJS;
 
 // HTML
 
 const html = () => {
-  return gulp.src("source/*.html")
+  return gulp
+    .src("source/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"))
-    .pipe(sync.stream())
-}
+    .pipe(sync.stream());
+};
 
 exports.html = html;
 
 // JS
 
 const js = () => {
-  return gulp.src("source/js/script.js")
+  return gulp
+    .src("source/js/script.js")
     .pipe(
       webpack({
-        mode: 'production',
+        mode: "production",
         module: {
           rules: [
             {
-                test: /.js$/,
-                exclude: /node_modules/,
-                use: {
-                loader: 'babel-loader',
+              test: /.js$/,
+              exclude: /node_modules/,
+              use: {
+                loader: "babel-loader",
                 query: {
-                  presets: ["@babel/env"]
-                }
+                  presets: ["@babel/env"],
                 },
-            }
-            ],
+              },
+            },
+          ],
         },
         output: {
-          filename: 'bundle.js',
+          filename: "bundle.js",
         },
-        devtool: 'source-map',
+        devtool: "source-map",
       })
     )
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
-}
+};
 
 exports.js = js;
 
@@ -184,17 +183,16 @@ const deploy = () => {
     parallel: 10,
   });
 
-  const globs = [
-    "_site/**"
-  ];
+  const globs = ["_site/**"];
 
-  return gulp.src(globs, {
-    base: "./_site",
-    buffer: false
-  })
+  return gulp
+    .src(globs, {
+      base: "./_site",
+      buffer: false,
+    })
     .pipe(conn.newer("www/maffin.pw"))
     .pipe(conn.dest("www/maffin.pw"));
-}
+};
 
 exports.deploy = deploy;
 
@@ -202,13 +200,14 @@ exports.deploy = deploy;
 
 const clean = () => {
   return del("build");
-}
+};
 
 exports.clean = clean;
 
 // Build
 
-const build = (done) => gulp.series(clean, copy, styles, html, js, sprite)(done);
+const build = (done) =>
+  gulp.series(clean, copy, styles, html, js, sprite)(done);
 exports.build = build;
 
 // Server
@@ -216,14 +215,14 @@ exports.build = build;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: "build"
+      baseDir: "build",
     },
     cors: true,
     notify: false,
     ui: false,
   });
   done();
-}
+};
 
 exports.server = server;
 
@@ -233,8 +232,6 @@ const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/js/*.js", gulp.series("js"));
   gulp.watch("source/*.html", gulp.series("html"));
-}
+};
 
-exports.default = gulp.series(
-  build, server, watcher
-);
+exports.default = gulp.series(build, server, watcher);
