@@ -15,6 +15,7 @@ const svgstore = require("gulp-svgstore");
 const webp = require("gulp-webp");
 const del = require("del");
 const ftp = require("vinyl-ftp");
+const security = require("./security");
 
 // Styles
 
@@ -177,9 +178,9 @@ exports.js = js;
 
 const deploy = () => {
   const conn = ftp.create({
-    host: "31.31.196.213",
-    user: "u1107651",
-    password: "_Rhv0raK",
+    host: security.ftp.URL,
+    user: security.ftp.USER,
+    password: security.ftp.PASSWORD,
     parallel: 10,
   });
 
