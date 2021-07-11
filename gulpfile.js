@@ -191,8 +191,8 @@ const deploy = () => {
       base: "./_site",
       buffer: false,
     })
-    .pipe(conn.newer("www/maffin.pw"))
-    .pipe(conn.dest("www/maffin.pw"));
+    .pipe(conn.newer("/"))
+    .pipe(conn.dest("/"));
 };
 
 exports.deploy = deploy;
