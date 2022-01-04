@@ -1122,6 +1122,7 @@ a {
 .card__picture {
   display: block;
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: 10px;
@@ -1239,6 +1240,7 @@ a {
 .projects__img {
   display: block;
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -1246,7 +1248,6 @@ a {
 @media (min-width: 1300px) {
   .projects__img {
     width: 292px;
-    height: auto;
   }
 }
 

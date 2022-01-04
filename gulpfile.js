@@ -16,7 +16,7 @@ const cheerio = require("gulp-cheerio");
 const webp = require("gulp-webp");
 const del = require("del");
 const ftp = require("vinyl-ftp");
-// const security = require("./security");
+const security = require("./security");
 
 // Styles
 
@@ -185,26 +185,26 @@ exports.js = js;
 
 // ftp
 
-// const deploy = () => {
-//   const conn = ftp.create({
-//     host: security.ftp.URL,
-//     user: security.ftp.USER,
-//     password: security.ftp.PASSWORD,
-//     parallel: 10,
-//   });
+const deploy = () => {
+  const conn = ftp.create({
+    host: security.ftp.URL,
+    user: security.ftp.USER,
+    password: security.ftp.PASSWORD,
+    parallel: 10,
+  });
 
-//   const globs = ["_site/**"];
+  const globs = ["_site/**"];
 
-//   return gulp
-//     .src(globs, {
-//       base: "./_site",
-//       buffer: false,
-//     })
-//     .pipe(conn.newer("/"))
-//     .pipe(conn.dest("/"));
-// };
+  return gulp
+    .src(globs, {
+      base: "./_site",
+      buffer: false,
+    })
+    .pipe(conn.newer("/"))
+    .pipe(conn.dest("/"));
+};
 
-// exports.deploy = deploy;
+exports.deploy = deploy;
 
 // Delete
 
