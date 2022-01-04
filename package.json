@@ -52,7 +52,7 @@
     "source/sass/**/*.scss"
   ],
   "engines": {
-    "node": "12.18.3"
+    "node": "14.17.6"
   },
   "dependencies": {
     "postcss": "8.2.*"
