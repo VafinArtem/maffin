@@ -12,6 +12,7 @@ const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const imagemin = require("gulp-imagemin");
 const svgstore = require("gulp-svgstore");
+const cheerio = require("gulp-cheerio");
 const webp = require("gulp-webp");
 const del = require("del");
 const ftp = require("vinyl-ftp");
@@ -61,8 +62,16 @@ exports.images = images;
 
 const sprite = () => {
   return gulp
-    .src("source/img/svg/icon-*.svg")
-    .pipe(svgstore())
+    .src("source/img_new/icon-*.svg")
+    .pipe(svgstore({ inlineSvg: true }))
+    .pipe(
+      cheerio({
+        run: ($) => {
+          $("symbol").attr("fill", "none");
+        },
+        parserOptions: { xmlMode: true },
+      })
+    )
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("source/img/svg"));
 };
