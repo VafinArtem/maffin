@@ -1,0 +1,9 @@
+.link {
+  color: $basic-black;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $basic-green;
+  }
+}

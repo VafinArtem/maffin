@@ -29,7 +29,8 @@
   background-color: $special-blue;
 }
 
-.page-main__projects {
+.page-main__projects,
+.page-main__npm {
   padding-top: 40px;
 
   @media (min-width: $desktop-width) {
