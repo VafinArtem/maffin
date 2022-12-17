@@ -856,12 +856,14 @@ a {
   background-color: #f2f8fb;
 }
 
-.page-main__projects {
+.page-main__projects,
+.page-main__npm {
   padding-top: 40px;
 }
 
 @media (min-width: 1300px) {
-  .page-main__projects {
+  .page-main__projects,
+  .page-main__npm {
     padding-top: 60px;
   }
 }
@@ -1508,5 +1510,21 @@ a {
 
 .gallery__button:first-child {
   margin-right: 10px;
+}
+
+.npm__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  color: #3f2d20;
+  text-decoration: underline;
+}
+
+.link:hover,
+.link:focus {
+  color: #008272;
 }
 
